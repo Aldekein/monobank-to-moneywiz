@@ -1,7 +1,7 @@
 'use strict'
-const parse = require('csv-parse/lib/sync')
+const csv = require('csv-parse/sync')
 const fs = require('fs')
-const d2c = parse(fs.readFileSync('data/descriptions2categories.csv', 'utf8'), { columns: true, delimiter: ',' })
+const d2c = csv.parse(fs.readFileSync('data/descriptions2categories.csv', 'utf8'), { columns: true, delimiter: ';' })
 const stringSimilarity = require('string-similarity')
 // TODO: allow to configure it in a better place
 const minimalSimilarity = 0.420

@@ -1,9 +1,10 @@
 {
   "name": "monobank-to-moneywiz",
-  "version": "1.0.0",
-  "description": "monobank Bank Statement -> Email -> Parser -> CSV for MoneyWiz",
-  "main": "index.js",
+  "version": "1.2.0",
+  "description": "Transform Monobank transactions to MoneyWiz format",
   "scripts": {
+    "import": "node api2csv.js",
+    "categories": "node import_categories.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,10 +18,10 @@
   },
   "homepage": "https://github.com/Aldekein/monobank-to-moneywiz#readme",
   "dependencies": {
-    "csv-parse": "^4.10.1",
-    "csv-stringify": "^5.5.0",
-    "lowdb": "^1.0.0",
-    "monobank-api-client": "^1.0.2",
+    "csv-parse": "^5.6.0",
+    "csv-stringify": "^6.4.5",
+    "dotenv": "^16.4.7",
+    "monobank-api-client": "git+ssh://git@github.com:Aldekein/monobank-api-client.git",
     "standard": "^14.3.4",
     "string-similarity": "^4.0.1"
   }
